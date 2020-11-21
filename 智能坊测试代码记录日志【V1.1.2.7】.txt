@@ -1,0 +1,3217 @@
+<<<<<<< HEAD
+智能坊测试代码记录日志
+V1.1.2.7
+
+ben@ranger-MS-7817:~/work/dacrs/src$ ./dacrs-d -datadir=/home/ben/work/dacrs_test importprivkey cUwPkEYdg3d3CmNctg2aegdyeq7dbLta1HAVHcGQTp33kWqzMSuT
+{
+    "imorpt key address" : "dsGb9GyDGYnnHdjSvRfYbj9ox2zPbtgtpo"
+}
+
+importprivkey cUwPkEYdg3d3CmNctg2aegdyeq7dbLta1HAVHcGQTp33kWqzMSuT
+D:\work\dacrs_main>dacrs-d.exe -datadir=cur sendtoaddressraw 100 1000 dqidLeyaDi
+YovYTJCkGKutXJF8cygP56qg dxZmEwoLsjX6jPb7XQLegS4myBbkyWqR1b true
+
+
+
+ben@ranger-MS-7817:~/work/dacrs/src$ ./dacrs-d -datadir=/home/ben/work/dacrs_test saveblocktofile 6428091408883509d9cc70d1e16013baaaefaf51f76b7266148b5a89dd552e4e /home/ben/work/dacrs_test/block-255.log
+
+
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=tx_tests/tx_add_free
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:05:39
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/regid_test
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/regid_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:07:31
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/setaccount_test1
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:24:05
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/setaccount_test2
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/setaccount_test2
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:25:20
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/BatchWrite_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:25:54
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=allocator_tests/test_LockedPageManagerBase
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:27:32
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=appacc_tests/key_test1
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:29:17
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=appacc_tests/checkappacct_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:30:07
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+10000000000 1000000000 1000000000 3000000000 4000000000 3000000000 3000000000 2000000000 
+ischeck:0
+100000000000 20000000000 2000000000 3000000000 4000000000 2000000000 1000000000 2000000000 
+ischeck:0
+50000000000 20000000000 2000000000 10000000000 20000000000 10000000000 30000000000 10000000000 
+ischeck:0
+10000000000 1000000000 2000000000 5000000000 5000000000 1000000000 2000000000 3000000000 
+ischeck:0
+20000000000 2000000000 3000000000 4000000000 3000000000 3000000000 4000000000 4000000000 
+ischeck:0
+100000000000 20000000000 2000000000 50000000000 80000000000 40000000000 20000000000 10000000000 
+ischeck:1
+50000000000 20000000000 20000000000 30000000000 20000000000 5000000000 10000000000 5000000000 
+ischeck:1
+60000000000 20000000000 2000000000 3000000000 5000000000 6000000000 7000000000 2000000000 
+ischeck:0
+Shutdown : done
+
+*** No errors detected
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=base32_tests/base32_testvectors
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:32:20
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=base58_tests/base58_EncodeBase58
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:33:35
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=base58_tests/base58_DecodeBase58
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:34:08
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=base58_tests/base58_keys_invalid
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:34:34
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=base64_tests/base64_testvectors
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:36:26
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bignum_tests/bignum_setint64
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:38:10
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bignum_tests/bignum_SetCompact
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:39:11
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bignum_tests/bignum_SetHex
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:39:32
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ clear
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/bloom_create_insert_serialize
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:41:04
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/bloom_create_insert_serialize_with_tweak
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:41:35
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/bloom_create_insert_key
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:41:59
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/boolarg
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/boolarg
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:44:54
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/stringarg
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:47:21
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/intarg
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:47:47
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/doubledash
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:48:23
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/chain_main
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:51:12
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/chain_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:51:49
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/chain_regtest
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:52:13
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=CheckBlock_tests/May15
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:19:22
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=DoS_tests/DoS_banning
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:24:45
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=DoS_tests/DoS_banscore
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:27:04
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=DoS_tests/DoS_bantime
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:28:11
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=DoS_tests/DoS_checknbits
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:29:45
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=key_tests/key_test1
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:31:27
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=main_tests/subsidy_limit_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:32:37
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=mruset_tests/mruset_like_set
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:33:59
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=mruset_tests/mruset_limited_size
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:35:22
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=mruset_tests/mruset_window
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:35:58
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=multisig_tests/multisig_IsStandard
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:36:55
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=multisig_tests/multisig_Solver1
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:37:57
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/netbase_networks
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:38:51
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/netbase_properties
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:39:16
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/netbase_splithost
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:42:04
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/netbase_splithost
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:42:04
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/netbase_lookupnumeric
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:42:52
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/onioncat_test
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/onioncat_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:44:28
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=pressure_tests/tests
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:51:10
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=scriptdb_test/test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:57:05
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ clear
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=scriptdbex_test/add_erase
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:58:17
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=scriptdbex_test/overtime
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:16:52
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$
+
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/varints
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/varints
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:18:27
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/compactsize
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/compactsize
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:18:52
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/noncanonical
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:19:44
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/insert_delete
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:20:10
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=sigopcount_tests/GetSigOpCount
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:21:31
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=system_test/acct_process
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=system_test/acct_process
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:22:40
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=uint256_tests/basics
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:26:56
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=uint256_tests/comparison
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:27:41
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=uint256_tests/methods
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:28:40
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=uint256_tests/conversion
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:29:06
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_criticalsection
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:30:34
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_MedianFilter
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_MedianFilter
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:31:30
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_ParseHex
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:31:55
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_HexStr
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_HexStr
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:32:21
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_DateTimeStrFormat
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:33:01
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_WildcardMatch
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:33:48
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_FormatMoney
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:34:18
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_ParseMoney
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:34:47
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_IsHex
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:35:19
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_seed_insecure_rand
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:35:54
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_TimingResistantEqual
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:36:26
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/strprintf_numbers
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:36:59
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=sysacct_test/transfer_test
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 11:46:10
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+g_cChainActive.Height()=0
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=sysacct_test/register_test
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 11:52:08
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_1
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-11 02:48:25
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_2
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-11 02:50:51
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_2_with_update_none
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-11 02:51:54
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_3_and_serialize
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_3_and_serialize
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-11 02:52:26
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_4
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-11 02:53:45
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+智能坊测试代码记录日志
+V1.1.2.7
+
+ben@ranger-MS-7817:~/work/dacrs/src$ ./dacrs-d -datadir=/home/ben/work/dacrs_test importprivkey cUwPkEYdg3d3CmNctg2aegdyeq7dbLta1HAVHcGQTp33kWqzMSuT
+{
+    "imorpt key address" : "dsGb9GyDGYnnHdjSvRfYbj9ox2zPbtgtpo"
+}
+
+importprivkey cUwPkEYdg3d3CmNctg2aegdyeq7dbLta1HAVHcGQTp33kWqzMSuT
+D:\work\dacrs_main>dacrs-d.exe -datadir=cur sendtoaddressraw 100 1000 dqidLeyaDi
+YovYTJCkGKutXJF8cygP56qg dxZmEwoLsjX6jPb7XQLegS4myBbkyWqR1b true
+
+
+
+ben@ranger-MS-7817:~/work/dacrs/src$ ./dacrs-d -datadir=/home/ben/work/dacrs_test saveblocktofile 6428091408883509d9cc70d1e16013baaaefaf51f76b7266148b5a89dd552e4e /home/ben/work/dacrs_test/block-255.log
+
+
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=tx_tests/tx_add_free
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:05:39
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/regid_test
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/regid_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:07:31
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/setaccount_test1
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:24:05
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/setaccount_test2
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/setaccount_test2
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:25:20
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=accountview_tests/BatchWrite_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:25:54
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=allocator_tests/test_LockedPageManagerBase
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:27:32
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=appacc_tests/key_test1
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:29:17
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=appacc_tests/checkappacct_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:30:07
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+10000000000 1000000000 1000000000 3000000000 4000000000 3000000000 3000000000 2000000000 
+ischeck:0
+100000000000 20000000000 2000000000 3000000000 4000000000 2000000000 1000000000 2000000000 
+ischeck:0
+50000000000 20000000000 2000000000 10000000000 20000000000 10000000000 30000000000 10000000000 
+ischeck:0
+10000000000 1000000000 2000000000 5000000000 5000000000 1000000000 2000000000 3000000000 
+ischeck:0
+20000000000 2000000000 3000000000 4000000000 3000000000 3000000000 4000000000 4000000000 
+ischeck:0
+100000000000 20000000000 2000000000 50000000000 80000000000 40000000000 20000000000 10000000000 
+ischeck:1
+50000000000 20000000000 20000000000 30000000000 20000000000 5000000000 10000000000 5000000000 
+ischeck:1
+60000000000 20000000000 2000000000 3000000000 5000000000 6000000000 7000000000 2000000000 
+ischeck:0
+Shutdown : done
+
+*** No errors detected
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=base32_tests/base32_testvectors
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:32:20
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=base58_tests/base58_EncodeBase58
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:33:35
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=base58_tests/base58_DecodeBase58
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:34:08
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=base58_tests/base58_keys_invalid
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:34:34
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=base64_tests/base64_testvectors
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:36:26
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bignum_tests/bignum_setint64
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:38:10
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bignum_tests/bignum_SetCompact
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:39:11
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bignum_tests/bignum_SetHex
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:39:32
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ clear
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/bloom_create_insert_serialize
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:41:04
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/bloom_create_insert_serialize_with_tweak
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:41:35
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/bloom_create_insert_key
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 02:41:59
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/boolarg
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/boolarg
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:44:54
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/stringarg
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:47:21
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/intarg
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:47:47
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/doubledash
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:48:23
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/chain_main
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:51:12
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/chain_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:51:49
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=chainparam_tests/chain_regtest
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 07:52:13
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=CheckBlock_tests/May15
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:19:22
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=DoS_tests/DoS_banning
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:24:45
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=DoS_tests/DoS_banscore
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:27:04
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=DoS_tests/DoS_bantime
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:28:11
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=DoS_tests/DoS_checknbits
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:29:45
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=key_tests/key_test1
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:31:27
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=main_tests/subsidy_limit_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:32:37
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=mruset_tests/mruset_like_set
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:33:59
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=mruset_tests/mruset_limited_size
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:35:22
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=mruset_tests/mruset_window
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:35:58
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=multisig_tests/multisig_IsStandard
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:36:55
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=multisig_tests/multisig_Solver1
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:37:57
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/netbase_networks
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:38:51
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/netbase_properties
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:39:16
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/netbase_splithost
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:42:04
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/netbase_splithost
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:42:04
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/netbase_lookupnumeric
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:42:52
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/onioncat_test
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=netbase_tests/onioncat_test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:44:28
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=pressure_tests/tests
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:51:10
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=scriptdb_test/test
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:57:05
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ clear
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=scriptdbex_test/add_erase
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 08:58:17
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=scriptdbex_test/overtime
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:16:52
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$
+
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/varints
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/varints
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:18:27
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/compactsize
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/compactsize
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:18:52
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/noncanonical
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:19:44
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=serialize_tests/insert_delete
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:20:10
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=sigopcount_tests/GetSigOpCount
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:21:31
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=system_test/acct_process
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=system_test/acct_process
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:22:40
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=uint256_tests/basics
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:26:56
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=uint256_tests/comparison
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:27:41
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=uint256_tests/methods
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:28:40
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=uint256_tests/conversion
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:29:06
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_criticalsection
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:30:34
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_MedianFilter
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_MedianFilter
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:31:30
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_ParseHex
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:31:55
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_HexStr
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_HexStr
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:32:21
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_DateTimeStrFormat
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:33:01
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_WildcardMatch
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:33:48
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_FormatMoney
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:34:18
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_ParseMoney
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:34:47
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_IsHex
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:35:19
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_seed_insecure_rand
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:35:54
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/util_TimingResistantEqual
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:36:26
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=util_tests/strprintf_numbers
+Dacrs version v1.1.2.7-b981c64-release-linux (2017-01-09 19:40:31 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 09:36:59
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=sysacct_test/transfer_test
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 11:46:10
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+g_cChainActive.Height()=0
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=sysacct_test/register_test
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-10 11:52:08
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_1
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-11 02:48:25
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_2
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-11 02:50:51
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_2_with_update_none
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-11 02:51:54
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_3_and_serialize
+Waring the test of must del /home/ben/work/dacrs_test/regtest/blocks
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_3_and_serialize
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-11 02:52:26
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ ./dacrs_test -datadir=/home/ben/work/dacrs_test --run_test=bloom_tests/merkle_block_4
+Dacrs version v1.1.2.7-20022b9-dirty-release-linux (2017-01-10 16:42:39 +0800)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Using Lua version Lua 5.3.1
+Using Boost version 1.55
+Using Level DB version 1.17
+Using Berkeley DB version Berkeley DB 5.3.28: (September  9, 2013)
+Using miniupnpc version 1.9,API version 10
+Startup time: 2017-01-11 02:53:45
+Default data directory /home/ben/.Dacrs
+Using data directory /home/ben/work/dacrs_test/regtest
+Using at most 125 connections (         1024 file descriptors available)
+Running 1 test case...
+Shutdown : done
+
+*** No errors detected
+ben@ranger-MS-7817:~/work/dacrs/src/test$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 7a6e572d57b80f22e32c12a9fb12ba3e4d0a14e9

@@ -1,0 +1,15 @@
+1.比特币运行原理
+http://www.righto.com/2014/02/bitcoins-hard-way-using-raw-bitcoin.html  
+2.比特币矿池运行原理
+http://www.righto.com/2014/02/bitcoin-mining-hard-way-algorithms.html
+3.比特币代码编译
+https://bitcointalk.org/index.php?topic=149479.0  （翻墙才能打开）
+4.中本聪论文
+http://wenku.baidu.com/link?url=VAzgVzTS3sOW_w0Iurt3dPSxZLGJ_jQmtt6YDX-60l3mPuhGW3oQoLMGiIshXI-IcdY7MxoI6Ug37hzcfZnEFYoQw1DcmklTvIBTJdgL7m3（巴比特中文翻译）
+http://blog.163.com/w_howard/blog/static/201665138201311222844857/（英文原版）
+5.比特币源代码地址
+https://github.com/bitcoin/bitcoin
+6.比特币开发帮助
+https://bitcoin.org/en/developer-reference#block-headers
+7.比特币维基百科
+https://en.bitcoin.it/wiki/Main_Page

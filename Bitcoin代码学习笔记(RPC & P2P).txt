@@ -1,0 +1,316 @@
+=======================================================================================================
+Bitcoin PRC通信框架代码解读：
+=======================================================================================================
+
+客户端与节点之间的通信使用HTTP协议，节点作为HTTP服务端，使用 libevent 库中的一个轻量级实现，在函数 InitHTTPServer() 中初始化。
+
+
+所有来自客户端的RPC Http请求，最初响应的函数是
+
+
+/** HTTP request callback */  static void http_request_cb(struct evhttp_request* req, void* arg)
+
+
+通过以下语句进行注册：
+
+evhttp_set_gencb(http, http_request_cb, nullptr);
+
+
+http_request_cb 函数实现中，会根据http请求的 URI 从 pathHandlers（一个 vector<HTTPPathHandler>）中进行匹配查找，当找到一个合适的 HTTPPathHandler 之后，就将之包装成一个工作项HTTPWorkItem 添加到 WorkQueue 之中：
+
+
+std::unique_ptr<HTTPWorkItem> item(new HTTPWorkItem(std::move(hreq), path, i->handler)); workQueue->Enqueue(item.get());
+
+也就是说初始回调只做了一个入队操作，并没有进行真正的 PRC 命令响应。
+
+
+WorkQueue 用于实现一个典型的 生产者-消费者模型，将HTTP请求的处理异步化，而 生产者 与消费者线程数量比为 1 : N， 通过下面代码：
+
+
+
+bool StartHTTPServer()
+{
+    int rpcThreads = std::max((long)gArgs.GetArg("-rpcthreads", DEFAULT_HTTP_THREADS), 1L);
+    std::packaged_task<bool(event_base*, evhttp*)> task(ThreadHTTP);
+    threadResult = task.get_future();
+    threadHTTP = std::thread(std::move(task), eventBase, eventHTTP);
+
+    for (int i = 0; i < rpcThreads; i++) {
+        std::thread rpc_worker(HTTPWorkQueueRun, workQueue);
+        rpc_worker.detach();
+    }
+    return true;
+}
+
+
+ThreadHTTP 入口对应的线程 负责调用了 http_request_cb 回调函数，属于队列 WorkQueue 的生产者，下面 rpcThreads 个线程 作为消费者线程负责处理真正的回调，所有消费者线程的入口函数都是 WorkQueue::Run()：
+
+
+    /** Thread function */
+    void Run()
+    {
+        ThreadCounter count(*this);
+        while (true) {
+            std::unique_ptr<WorkItem> i;
+            {
+                std::unique_lock<std::mutex> lock(cs);
+                while (running && queue.empty())
+                    cond.wait(lock);
+                if (!running)
+                    break;
+                i = std::move(queue.front());
+                queue.pop_front();
+            }
+            (*i)(); // 调用
+        }
+    }
+
+可以看到，所有这些线程都是在调用WorkItem 的回调。
+
+
+
+而 StartHTTPRPC() 方法中，注册了一个 HTTPPathHandler：
+
+
+RegisterHTTPHandler("/", true, HTTPReq_JSONRPC);
+
+换言之，所有 URI 为 / 的 Http 请求，最终都会通过WorkQueue 的消费者线程调用到 HTTPReq_JSONPRC 方法上来，而该方法，会解析Http请求的消息体(json格式)，并将调用转发至 RPCTable::execute:
+
+
+
+        // Parse request
+        UniValue valRequest;
+        if (!valRequest.read(req->ReadBody()))
+            throw JSONRPCError(RPC_PARSE_ERROR, "Parse error");
+
+        // Set the URI
+        jreq.URI = req->GetURI();
+
+        std::string strReply;
+        // singleton request
+        if (valRequest.isObject()) {
+            jreq.parse(valRequest);
+
+            UniValue result = tableRPC.execute(jreq);
+
+            // Send reply
+            strReply = JSONRPCReply(result, NullUniValue, jreq.id);
+
+RPCTable::execute 方法中，会根据 HTTP 请求的命令名字 从映射表 mapCommands 中进行查找，从而找到真正的回调，并调用之。
+
+
+
+UniValue CRPCTable::execute(const JSONRPCRequest &request) const
+{
+    // Find method
+    const CRPCCommand *pcmd = tableRPC[request.strMethod];
+
+    g_rpcSignals.PreCommand(*pcmd);
+
+    try
+    {
+        // Execute, convert arguments to array if necessary
+        if (request.params.isObject()) {
+            return pcmd->actor(transformNamedArguments(request, pcmd->argNames));
+        } else {
+            return pcmd->actor(request);
+        }
+    }
+    catch (const std::exception& e)
+    {
+        throw JSONRPCError(RPC_MISC_ERROR, e.what());
+    }
+}
+
+而 RPCTable 中映射表 mapCommands 基本是在 下面方法中被初始化的(当然还有其他位置)：
+
+static inline void RegisterAllCoreRPCCommands(CRPCTable &t)
+{
+    RegisterBlockchainRPCCommands(t);
+    RegisterNetRPCCommands(t);
+    RegisterMiscRPCCommands(t);
+    RegisterMiningRPCCommands(t);
+    RegisterRawTransactionRPCCommands(t);
+}
+
+上面整个调用流程是主要的，还有其他的路径，譬如以 RPC 请求的 URI 如果以 /rest 开头的话，会进入其他的调用流程：
+
+static const struct {
+    const char* prefix;
+    bool (*handler)(HTTPRequest* req, const std::string& strReq);
+} uri_prefixes[] = {
+      {"/rest/tx/", rest_tx},
+      {"/rest/block/notxdetails/", rest_block_notxdetails},
+      {"/rest/block/", rest_block_extended},
+      {"/rest/chaininfo", rest_chaininfo},
+      {"/rest/mempool/info", rest_mempool_info},
+      {"/rest/mempool/contents", rest_mempool_contents},
+      {"/rest/headers/", rest_headers},
+      {"/rest/getutxos", rest_getutxos},
+};
+
+bool StartREST()
+{
+    for (unsigned int i = 0; i < ARRAYLEN(uri_prefixes); i++)
+        RegisterHTTPHandler(uri_prefixes[i].prefix, false, uri_prefixes[i].handler);
+    return true;
+}
+
+以上，像 WorkQueue 这样的 生产者 - 消费者 队列模型，还存在很多处，譬如，脚本检测 ThreadScriptCheck
+
+    LogPrintf("Using %u threads for script verification\n", nScriptCheckThreads);
+    if (nScriptCheckThreads) {
+        for (int i=0; i<nScriptCheckThreads-1; i++)
+            threadGroup.create_thread(&ThreadScriptCheck);
+    }
+
+还有 boost信号的响应也使用了队列来异步。
+
+使用队列的好处：1. 异步，加速响应，避免直接调用产生延迟；2. 多线程并发。
+
+
+=======================================================================================================
+Bitcoin P2P网络初始化代码解读：
+=======================================================================================================
+
+
+AppInitMain 函数中以下语句触发 P2P网络子系统的初始化：
+
+if (!connman.Start(scheduler, connOptions)) 
+{ return false;
+}
+
+CConnman::Start 主要做了以下事情：
+
+1. 根据 vBinds 和 wWhiteBinds 参数创建监听套借口；
+
+2. 将vSeedNodes 添加到 OneShot 列表中；
+
+3. 读取 peers.dat 地址数据 至 addrman 中；
+
+4. 读取 banlist.dat 地址禁止数据 至 setBanned 中；
+
+5. 启动以下五个线程：
+
+
+    // Send and receive from sockets, accept connections
+    threadSocketHandler = std::thread(&TraceThread<std::function<void()> >, "net", std::function<void()>(std::bind(&CConnman::ThreadSocketHandler, this)));
+
+    if (!gArgs.GetBoolArg("-dnsseed", true))
+        LogPrintf("DNS seeding disabled\n");
+    else
+        threadDNSAddressSeed = std::thread(&TraceThread<std::function<void()> >, "dnsseed", std::function<void()>(std::bind(&CConnman::ThreadDNSAddressSeed, this)));
+
+    // Initiate outbound connections from -addnode
+    threadOpenAddedConnections = std::thread(&TraceThread<std::function<void()> >, "addcon", std::function<void()>(std::bind(&CConnman::ThreadOpenAddedConnections, this)));
+
+    if (connOptions.m_use_addrman_outgoing && !connOptions.m_specified_outgoing.empty()) {
+        if (clientInterface) {
+            clientInterface->ThreadSafeMessageBox(
+                _("Cannot provide specific connections and have addrman find outgoing connections at the same."),
+                "", CClientUIInterface::MSG_ERROR);
+        }
+        return false;
+    }
+    if (connOptions.m_use_addrman_outgoing || !connOptions.m_specified_outgoing.empty())
+        threadOpenConnections = std::thread(&TraceThread<std::function<void()> >, "opencon", std::function<void()>(std::bind(&CConnman::ThreadOpenConnections, this, connOptions.m_specified_outgoing)));
+
+    // Process messages
+    threadMessageHandler = std::thread(&TraceThread<std::function<void()> >, "msghand", std::function<void()>(std::bind(&CConnman::ThreadMessageHandler, this)));
+
+    // Dump network addresses
+    scheduler.scheduleEvery(std::bind(&CConnman::DumpData, this), DUMP_ADDRESSES_INTERVAL * 1000);
+
+
+其中 threadSocketHandler 线程主要循环做以下三件事情： 1. 关闭和移除需要断开的连接；2. 接受新的节点连接；3. 收发原始二进制数据，并对接收的数据甄别消息边界，入口函数为：CConnman::ThreadSocketHandler。
+
+
+threadMessageHandler 线程主要是循环处理接收到的消息（由threadSocketHandler线程接收的），并根据具体的消息类型做不同的处理，并发送必要的应答消息，入口函数为：CConnman::ThreadMessageHandler。
+
+
+threadDNSAddressSeed 线程通过一些域名种子发现一个可连接的节点，前提是自己没有其他能力或方式发现节点，此线程生命周期很短，事情做完了之后就会结束，入口函数为：CConnman::ThreadDNSAddressSeed。
+
+
+threadOpenAddedConnections 线程会主动去连接那些 通过命令行参数addNode指定的节点集合，但是此类outgoing 节点同时在线数量存在一个上限，这个上限值通常为 MAX_ADDNODE_CONNECTIONS，也就是8个，线程入口函数为：CConnman::ThreadOpenAddedConnections，可以看到也是一个常驻线程。
+
+
+threadOpenConnections 线程主要是尝试连接那些通过命令行参数 -connect 制定的地址和 地址名册中的地址，两者择其一，后者地址存在同时在线数量上限，线程入口函数为：CConnman::ThreadOpenConnections。
+
+
+下面是消息处理线程函数的代码片段：
+
+void CConnman::ThreadMessageHandler()
+{
+    while (!flagInterruptMsgProc)
+    {
+        std::vector<CNode*> vNodesCopy;
+        {
+            LOCK(cs_vNodes);
+            vNodesCopy = vNodes;
+            for (CNode* pnode : vNodesCopy) {
+                pnode->AddRef();
+            }
+        }
+
+        bool fMoreWork = false;
+
+        for (CNode* pnode : vNodesCopy)
+        {
+            if (pnode->fDisconnect)
+                continue;
+
+            // Receive messages
+            bool fMoreNodeWork = m_msgproc->ProcessMessages(pnode, flagInterruptMsgProc);
+            fMoreWork |= (fMoreNodeWork && !pnode->fPauseSend);
+            if (flagInterruptMsgProc)
+                return;
+            // Send messages
+            {
+                LOCK(pnode->cs_sendProcessing);
+                m_msgproc->SendMessages(pnode, flagInterruptMsgProc);
+            }
+
+            if (flagInterruptMsgProc)
+                return;
+        }
+
+        {
+            LOCK(cs_vNodes);
+            for (CNode* pnode : vNodesCopy)
+                pnode->Release();
+        }
+
+        std::unique_lock<std::mutex> lock(mutexMsgProc);
+        if (!fMoreWork) {
+            condMsgProc.wait_until(lock, std::chrono::steady_clock::now() + std::chrono::milliseconds(100), [this] { return fMsgProcWake; });
+        }
+        fMsgProcWake = false;
+    }
+}
+
+为了访问节点集合，先拷贝了一份数据，这个意图应该是为了尽量减少对锁的持有时间，因为其他的线程可能会修改节点集vNodes, 接着又手动添加了引用计数，后面又手动减了引用技术，比较纳闷的是，为什么不使用boost库中现成的引用计数智能指针，而去自己实现呢，所有这些应该都是为了安全的访问 vNodes，这可以通过合理调整各线程的职责，让 vNodes 的修改均发生在一个线程内，并改成std::list 容器，就可以避免上述的拷贝动作，以及对引用计数的操作。
+
+
+另外从代码中不难看出，真正的消息处理转发给了 NetEventsInterface* m_msgproc 成员，而这个成员的真实类型是 PeerLogicValidation，下面是此类声明片段：
+
+    void InitializeNode(CNode* pnode) override;
+    void FinalizeNode(NodeId nodeid, bool& fUpdateConnectionTime) override;
+    /** Process protocol messages received from a given node */
+    bool ProcessMessages(CNode* pfrom, std::atomic<bool>& interrupt) override;
+    /**
+    * Send queued protocol messages to be sent to a give node.
+    *
+    * @param[in]   pto             The node which we are sending messages to.
+    * @param[in]   interrupt       Interrupt condition for processing threads
+    * @return                      True if there is more work to be done
+    */
+    bool SendMessages(CNode* pto, std::atomic<bool>& interrupt) override;
+
+PeerLogicValidation::ProcessMessages 函数先从CNode::vProcessMsg 的前端拉出一个消息，并做了一些必要的头部校验，然后转调用了一个名为ProcessMessage 的普通静态方法，这个方法才是真正的消息处理的地方。
+
+bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStream& vRecv, int64_t nTimeReceived, const CChainParams& chainparams, CConnman* connman, const std::atomic<bool>& interruptMsgProc)
+
+上面这个方法非常复杂，它会根据消息类型做不同的处理，足足有将近1400行代码，还没有仔细去看，未完待续...
+
+
+总的来说，这部分的代码比较乱，像 CComman 和 CNode 等类里面成员变量太多，状态太过复杂，职责划分不太清晰，代码层次混乱，以上5个线程的规划及职责也不是太合理，导致各种各样的锁到处都是，另外对于套借口的处理，使用了select 函数，这个函数局限性很明显，bitcoin 中使用了 libevent 开源库提供的http，这不失为一个好的替代方案。
